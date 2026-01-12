@@ -414,15 +414,16 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             position: relative;
+            white-space: pre-line;
         }
 
         .timeline-item-description.has-more::after {
-            content: '... read more';
+            content: 'read more';
             position: absolute;
             right: 0;
             bottom: 0;
-            background: var(--header-bg);
-            padding-left: 4px;
+            background: linear-gradient(to right, transparent, var(--header-bg) 15%, var(--header-bg));
+            padding-left: 30px;
             font-weight: 500;
         }
 
@@ -545,15 +546,16 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             position: relative;
+            white-space: pre-line;
         }
 
         .project-description.has-more::after {
-            content: '... read more';
+            content: 'read more';
             position: absolute;
             right: 0;
             bottom: 0;
-            background: var(--header-bg);
-            padding-left: 4px;
+            background: linear-gradient(to right, transparent, var(--header-bg) 15%, var(--header-bg));
+            padding-left: 30px;
             font-weight: 500;
         }
 

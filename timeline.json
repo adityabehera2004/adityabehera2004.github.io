@@ -2,7 +2,7 @@
   "items": [
     {
       "title": "James Madison High School",
-      "description": "",
+      "description": "Graduated",
       "side": "R",
       "startMonth": 8,
       "startYear": 2019,
@@ -11,7 +11,7 @@
     },
     {
       "title": "GMU ASSIP Internship",
-      "description": "",
+      "description": "Integrated NASA’s ROCKE-3D climate model into GMU’s HOPPER supercomputer using FORTRAN. Modified climate simulations’ initial conditions with Geographic Information System (GIS) software. Deployed and analyzed simulation results on HOPPER and with Matplotlib.",
       "side": "L",
       "startMonth": 6,
       "startYear": 2022,
@@ -20,7 +20,7 @@
     },
     {
       "title": "GMU ASSIP Internship",
-      "description": "",
+      "description": "Integrated NASA’s ROCKE-3D climate model into GMU’s HOPPER supercomputer using FORTRAN. Modified climate simulations’ initial conditions with Geographic Information System (GIS) software. Deployed and analyzed simulation results on HOPPER and with Matplotlib.",
       "side": "L",
       "startMonth": 6,
       "startYear": 2023,
@@ -28,26 +28,8 @@
       "endYear": 2023
     },
     {
-      "title": "ExaFlow Research Assistant",
-      "description": "",
-      "side": "L",
-      "startMonth": 8,
-      "startYear": 2024,
-      "endMonth": 5,
-      "endYear": 2025
-    },
-    {
-      "title": "ExaFlow Research Assistant",
-      "description": "",
-      "side": "L",
-      "startMonth": 8,
-      "startYear": 2025,
-      "endMonth": 5,
-      "endYear": 2026
-    },
-    {
       "title": "Fall 2023",
-      "description": "",
+      "description": "APPH 1040 Sci Foundation of Health\nCS 1100 Freshman Leap Seminar\nCS 1331 Intro-Object Orient Prog\nGT 1000 GT Freshman Seminar\nMATH 1564 LinAlg w Abstract Vec Sp\nPHYS 2211 Intro Physics I\nPUBP 1142 Teams and Collaboration",
       "side": "R",
       "startMonth": 8,
       "startYear": 2023,
@@ -56,7 +38,7 @@
     },
     {
       "title": "Spring 2024",
-      "description": "",
+      "description": "CS 1332 Data Struct & Algorithms\nCS 2110 Computer Organiz&Program\nENGL 1102 English Composition II\nGT 1201 Explr Grand Challenges\nPSYC 1101 General Psychology",
       "side": "R",
       "startMonth": 1,
       "startYear": 2024,
@@ -65,7 +47,7 @@
     },
     {
       "title": "Fall 2024",
-      "description": "",
+      "description": "CS 2050 Intro Discrete Math\nCS 2200 Systems and Networks\nCS 2340 Objects and Design\nISYE 3770 Statistics & Applications\nMATH 2550 Intro Multivariable Calc\nVIP 3602 VIP Proj Team: JR II",
       "side": "R",
       "startMonth": 8,
       "startYear": 2024,
@@ -74,7 +56,7 @@
     },
     {
       "title": "Spring 2025",
-      "description": "",
+      "description": "CS 3001 Computing & Society\nCS 3511 Algorithms Honors\nCS 3600 Intro-Artificial Intell\nCS 3630 Intro-Perception & Robotic\nVIP 3602 VIP Proj Team: JR II",
       "side": "R",
       "startMonth": 1,
       "startYear": 2025,
@@ -83,7 +65,7 @@
     },
     {
       "title": "Fall 2025",
-      "description": "",
+      "description": "CS 3210 Design-Operating Systems\nCS 3251 Computer Networking I\nCS 4240 Compilers & Interpreters\nCS 4641 Machine Learning\nECE 2031 Digital Design Lab\nVIP 4603 VIP Project Team: SR III",
       "side": "R",
       "startMonth": 8,
       "startYear": 2025,
@@ -92,7 +74,7 @@
     },
     {
       "title": "Spring 2026",
-      "description": "",
+      "description": "In progress",
       "side": "R",
       "startMonth": 1,
       "startYear": 2026,
@@ -101,7 +83,7 @@
     },
     {
       "title": "Oxford/Spain Study Abroad",
-      "description": "",
+      "description": "Traveled through Spain and Portugal while learning about history, art, and music. Then, went to Mansfield College in Oxford to learn about UI/UX design and database systems.\n\nID 2242 History of Art 2\nMUSI 3621 Musicians & their Music\nCS 1315 Intro Media Computation\nCS 4400 Intr to Database Systems",
       "side": "L",
       "startMonth": 6,
       "startYear": 2024,
@@ -109,8 +91,26 @@
       "endYear": 2024
     },
     {
+      "title": "ExaFlow Research Assistant",
+      "description": "Presented findings on GPU parallelization and HPC techniques at the APS Global Physics Summit. Developing a physics-informed neural network (PINN) optimized for fluid dynamics simulations on HPC systems. Optimizing memory access patterns and GPU kernel executions with CUDA for 150% improved throughput on multi-node GPU clusters to improve performance of C++ computational fluid dynamics solver ExaFlow3D. Benchmarking GPU parallelization frameworks (OpenMP, OpenACC, Kokkos, SYCL) on Georgia Tech’s PACE ICE cluster to evaluate scalability, memory bandwidth, and computational efficiency. Collaborating with a team of 12 graduate and undergraduate students to scale ExaFlow3D.",
+      "side": "L",
+      "startMonth": 8,
+      "startYear": 2024,
+      "endMonth": 5,
+      "endYear": 2025
+    },
+    {
+      "title": "ExaFlow Research Assistant",
+      "description": "Presented findings on GPU parallelization and HPC techniques at the APS Global Physics Summit. Developing a physics-informed neural network (PINN) optimized for fluid dynamics simulations on HPC systems. Optimizing memory access patterns and GPU kernel executions with CUDA for 150% improved throughput on multi-node GPU clusters to improve performance of C++ computational fluid dynamics solver ExaFlow3D. Benchmarking GPU parallelization frameworks (OpenMP, OpenACC, Kokkos, SYCL) on Georgia Tech’s PACE ICE cluster to evaluate scalability, memory bandwidth, and computational efficiency. Collaborating with a team of 12 graduate and undergraduate students to scale ExaFlow3D.",
+      "side": "L",
+      "startMonth": 8,
+      "startYear": 2025,
+      "endMonth": 5,
+      "endYear": 2026
+    },
+    {
       "title": "Amentum Internship",
-      "description": "",
+      "description": "Created a chassis monitor that will fly on the Artemis III mission to collect health and status information on the Programmable Logic Controllers, network bridges, and other embedded systems every millisecond. Built networking infrastructure to securely broadcast on the NASA network with under 10 millisecond latency. Designed a dashboard to monitor the rocket during launch rehearsals with stakeholder feedback. Authored documentation so stakeholders could compile the chassis monitor object into future launch rehearsals.",
       "side": "L",
       "startMonth": 6,
       "startYear": 2025,
