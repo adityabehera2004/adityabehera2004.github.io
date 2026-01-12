@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "My portfolio website showcasing my projects, skills, and experience. Built with vanilla HTML, CSS, and JavaScript, featuring a clean and modern design and a responsive layout that works seamlessly across all devices.",
+      "link": "https://adityabehera2004.github.io",
+      "links": [
+        {
+          "displayName": "GitHub",
+          "link": "https://github.com/adityabehera2004/adityabehera2004.github.io"
+        }, 
+        {
+          "displayName": "Website",
+          "link": "https://adityabehera2004.github.io"
+        }
+      ]
+    },
+    {
+      "title": "RepoRuler",
+      "description": "Chrome extension that displays GitHub repository size in the About section next to forks and stars. I created this because one time I accidentally cloned a repo that was 40GB. The extension works for public repos automatically, and private repos can use a Personal Access Token (PAT) for authentication. It helps developers quickly see repository sizes before cloning.",
+      "link": "https://chromewebstore.google.com/detail/reporuler/pbffgdgaelgacobpfgidjkpeoaljgpij",
+      "links": [
+        {
+          "displayName": "GitHub",
+          "link": "https://github.com/adityabehera2004/reporuler"
+        },
+        {
+          "displayName": "Chrome Extension",
+          "link": "https://chromewebstore.google.com/detail/reporuler/pbffgdgaelgacobpfgidjkpeoaljgpij"
+        }
+      ]
+    },
+    {
+      "title": "AnySpeed",
+      "description": "Chrome extension that provides enhanced video playback speed controls. This extension allows users to have more granular control over video playback speeds, making it easier to watch content at custom speeds that suit individual preferences. Built to improve the video watching experience with flexible speed options.",
+      "link": "https://chromewebstore.google.com/detail/anyspeed/elbbdkpeimgmoeakllkimgcpdnnfldoi",
+      "links": [
+        {
+          "displayName": "GitHub",
+          "link": "https://github.com/adityabehera2004/anyspeed-plugin"
+        },
+        {
+          "displayName": "Chrome Extension",
+          "link": "https://chromewebstore.google.com/detail/anyspeed/elbbdkpeimgmoeakllkimgcpdnnfldoi"
+        }
+      ]
+    }
+  ]
+}

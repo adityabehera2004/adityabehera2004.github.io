@@ -4,16 +4,1056 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Behera</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="icon" type="image/jpeg" href="github_profile_pic.jpeg">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --header-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --header-bg: #2d2d2d;
+            --border-color: #404040;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            min-height: 100vh;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid var(--border-color);
+            transition: border-color 0.3s ease;
+        }
+
+        .name {
+            font-size: 96px;
+            font-weight: 700;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 200px;
+            padding-top: calc((200px - 96px) / 2);
+        }
+
+        .name {
+            line-height: 1;
+            margin-top: 0;
+        }
+
+        .socials-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 12px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 18px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            text-decoration: none;
+        }
+
+        .social-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(0) saturate(100%) invert(var(--icon-invert, 0));
+            transition: filter 0.3s ease;
+        }
+
+        [data-theme="dark"] .social-icon img {
+            filter: brightness(0) saturate(100%) invert(1);
+        }
+
+        .social-account {
+            font-weight: 500;
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+
+        .social-link:hover .social-account {
+            text-decoration: underline;
+        }
+
+        .projects-section {
+            margin-top: 40px;
+        }
+
+        .timeline-section {
+            margin-top: 40px;
+        }
+
+        .timeline-heading {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 0 50px 0;
             text-align: center;
-            margin: 20vh auto;
+        }
+
+        .timeline-heading {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 0 50px 0;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+            min-height: 600px;
+            overflow: visible;
+        }
+
+        .timeline-line-wrapper {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            transform: translateX(-50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--text-color);
+            transform: translateX(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .timeline-extension-line {
+            position: fixed;
+            left: 50%;
+            width: 3px;
+            background-color: var(--text-color);
+            transform: translateX(-50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .timeline-circle {
+            position: absolute;
+            left: 50%;
+            width: 22px;
+            height: 22px;
+            background-color: var(--text-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        .timeline-start {
+            top: 0;
+        }
+
+        .timeline-end {
+            bottom: 0;
+        }
+
+        .timeline-date-label {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 4px 8px;
+        }
+
+        .timeline-start .timeline-date-label {
+            top: -35px;
+        }
+
+        .timeline-end-label {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 4px 8px;
+            z-index: 3;
+        }
+
+        .timeline-item {
+            position: absolute;
+            width: 45%;
+            z-index: 2;
+        }
+
+        .timeline-item-left {
+            left: 0;
+        }
+
+        .timeline-item-right {
+            right: 0;
+        }
+
+        .timeline-item-content {
+            background-color: var(--header-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .timeline-item-left .timeline-item-content:hover {
+            transform: translateX(-8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-item-right .timeline-item-content:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .timeline-modal {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 32px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s ease;
+            z-index: 1001;
+        }
+
+        .timeline-modal-close:hover {
+            background-color: var(--border-color);
+        }
+
+        .timeline-modal-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .timeline-modal-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 0 10px 0;
+            flex-shrink: 0;
+        }
+
+        .timeline-modal-date {
+            font-size: 18px;
+            color: var(--text-color);
+            opacity: 0.8;
+            margin: 0 0 20px 0;
+            flex-shrink: 0;
+        }
+
+        .timeline-modal-description {
+            font-size: 16px;
+            color: var(--text-color);
+            opacity: 0.9;
+            line-height: 1.6;
+            margin: 0;
+            overflow-y: auto;
+            flex: 1;
+            min-height: 0;
+            white-space: pre-line;
+        }
+
+        .timeline-modal-description::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .timeline-modal-description::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .timeline-modal-description::-webkit-scrollbar-thumb {
+            background-color: var(--border-color);
+            border-radius: 4px;
+        }
+
+        .timeline-modal-description::-webkit-scrollbar-thumb:hover {
+            background-color: var(--text-color);
+            opacity: 0.5;
+        }
+
+        .timeline-item-left .timeline-item-content {
+            margin-right: 20px;
+        }
+
+        .timeline-item-right .timeline-item-content {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .timeline-item-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 0 0 8px 0;
+        }
+
+        .timeline-item-date {
+            font-size: 14px;
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+
+        .timeline-item-description {
+            font-size: 14px;
+            margin: 8px 0 0 0;
+            color: var(--text-color);
+            opacity: 0.8;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .timeline-item-description.has-more::after {
+            content: '... read more';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: var(--header-bg);
+            padding-left: 4px;
+            font-weight: 500;
+        }
+
+        .timeline-item-dot {
+            position: absolute;
+            left: 50%;
+            width: 18px;
+            height: 18px;
+            background-color: var(--text-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            border: 4px solid var(--bg-color);
+            box-sizing: border-box;
+            transition: width 0.2s ease, height 0.2s ease, transform 0.2s ease, border-width 0.2s ease;
+        }
+
+        .timeline-item-dot.timeline-dot-highlighted {
+            width: 24px;
+            height: 24px;
+            border-width: 5px;
+            transform: translateX(-50%) translateY(-3px);
+        }
+
+        .timeline-item-highlight {
+            position: absolute;
+            left: 50%;
+            width: 3px;
+            background-color: var(--text-color);
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.2s ease, width 0.2s ease;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .timeline-item-highlight.timeline-highlight-active {
+            opacity: 1;
+            width: 5px;
+        }
+
+        .projects-heading {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 0 15px 0;
+        }
+
+        .projects-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .projects-carousel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 10px 0;
+        }
+
+        .projects-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .project-tile {
+            flex: 0 0 300px;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--header-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            min-height: 150px;
+        }
+
+        .project-tile:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: var(--text-color);
+        }
+
+        .project-title-link {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+
+        .project-title-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-description {
+            font-size: 14px;
+            margin: 0;
+            color: var(--text-color);
+            opacity: 0.8;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-description.has-more::after {
+            content: '... read more';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: var(--header-bg);
+            padding-left: 4px;
+            font-weight: 500;
+        }
+
+        .read-more-text {
+            color: var(--text-color);
+            opacity: 1;
+            font-weight: 500;
+        }
+
+        .project-tile-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+
+        .project-tile-link {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+
+        .project-tile-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-tile-link-separator {
+            color: var(--text-color);
+            opacity: 0.5;
+            margin: 0 4px;
+        }
+
+        .project-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .project-link {
+            font-size: 14px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-link-separator {
+            color: var(--text-color);
+            opacity: 0.5;
+            margin: 0 4px;
+        }
+
+        .project-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .project-modal {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .project-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 32px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s ease;
+            z-index: 10;
+        }
+
+        .project-modal-close:hover {
+            background-color: var(--border-color);
+        }
+
+        .project-modal-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .project-modal-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 0 20px 0;
+            flex-shrink: 0;
+        }
+
+        .project-modal-description {
+            font-size: 16px;
+            color: var(--text-color);
+            opacity: 0.9;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+            overflow-y: auto;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .project-modal-description::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .project-modal-description::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .project-modal-description::-webkit-scrollbar-thumb {
+            background-color: var(--border-color);
+            border-radius: 4px;
+        }
+
+        .project-modal-description::-webkit-scrollbar-thumb:hover {
+            background-color: var(--text-color);
+            opacity: 0.5;
+        }
+
+        .project-modal-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 5px;
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+
+        .project-modal-link {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: text-decoration 0.2s ease;
+        }
+
+        .project-modal-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-modal-link-separator {
+            color: var(--text-color);
+            opacity: 0.5;
+            margin: 0 12px;
+        }
+
+        .projects-nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--header-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 10;
+            transition: background-color 0.2s ease;
+        }
+
+        .projects-nav-button:hover {
+            background-color: var(--border-color);
+        }
+
+        .projects-nav-button.prev {
+            left: -20px;
+        }
+
+        .projects-nav-button.next {
+            right: -20px;
+        }
+
+        .theme-toggle-label {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .theme-toggle-input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .theme-toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.3s;
+            border-radius: 30px;
+        }
+
+        .theme-toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+
+        .theme-toggle-input:checked + .theme-toggle-slider {
+            background-color: #2196F3;
+        }
+
+        .theme-toggle-input:checked + .theme-toggle-slider:before {
+            transform: translateX(20px);
+        }
+
+        .theme-toggle-slider:hover {
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="dark"] .theme-toggle-slider {
+            background-color: #555;
+        }
+
+        [data-theme="dark"] .theme-toggle-input:checked + .theme-toggle-slider {
+            background-color: #2196F3;
+        }
+
+        main {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--bg-color);
+            z-index: 9999;
+            transition: opacity 1.5s ease, visibility 1.5s ease;
+        }
+
+        .loading-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        main {
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .name {
+                font-size: 48px;
+            }
+
+            .profile-section {
+                gap: 20px;
+            }
+
+            main {
+                padding: 40px 20px;
+            }
+
+            .project-tile {
+                flex: 0 0 250px;
+            }
+
+            .projects-nav-button {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+
+            .projects-nav-button.prev {
+                left: -10px;
+            }
+
+            .projects-nav-button.next {
+                right: -10px;
+            }
+
+            .project-modal {
+                max-width: 100%;
+                margin: 10px;
+            }
+
+            .project-modal-content {
+                padding: 30px 20px;
+            }
+
+            .project-modal-title {
+                font-size: 24px;
+            }
+
+            .project-modal-description {
+                font-size: 14px;
+            }
+
+            .project-modal-links {
+                gap: 15px;
+            }
+
+            .project-modal-link {
+                font-size: 16px;
+            }
+
+            .timeline-modal {
+                max-width: 100%;
+                margin: 10px;
+            }
+
+            .timeline-modal-content {
+                padding: 30px 20px;
+            }
+
+            .timeline-modal-title {
+                font-size: 24px;
+            }
+
+            .timeline-modal-date {
+                font-size: 16px;
+            }
+
+            .timeline-modal-description {
+                font-size: 14px;
+            }
+
+            .theme-toggle-label {
+                width: 40px;
+                height: 22px;
+            }
+
+            .theme-toggle-slider:before {
+                height: 16px;
+                width: 16px;
+                left: 3px;
+                bottom: 3px;
+            }
+
+            .theme-toggle-input:checked + .theme-toggle-slider:before {
+                transform: translateX(18px);
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hi! I'm still working on this!</h1>
+    <header>
+        <label class="theme-toggle-label">
+            <input type="checkbox" class="theme-toggle-input" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="theme-toggle-slider"></span>
+        </label>
+    </header>
+    <div class="loading-overlay" id="loading-overlay"></div>
+    <main>
+        <div class="profile-section">
+            <img src="github_profile_pic.jpeg" alt="Aditya Behera" class="profile-image">
+            <div class="profile-info">
+                <h1 class="name">Aditya Behera</h1>
+                <div id="socials-container" class="socials-container"></div>
+            </div>
+        </div>
+        <div class="projects-section">
+            <h2 class="projects-heading">Projects</h2>
+            <div class="projects-container" id="projects-container">
+                <button class="projects-nav-button prev" id="projects-prev" aria-label="Previous projects">‹</button>
+                <div class="projects-carousel" id="projects-carousel"></div>
+                <button class="projects-nav-button next" id="projects-next" aria-label="Next projects">›</button>
+            </div>
+        </div>
+        <div class="timeline-section">
+            <h2 class="timeline-heading">Timeline</h2>
+            <div class="timeline-container" id="timeline-container"></div>
+        </div>
+        <!-- Content will go here -->
+    </main>
+
+    <script>
+        // Global loading tracker
+        window.contentLoaded = {
+            socials: false,
+            projects: false,
+            timeline: false
+        };
+
+        window.checkAllLoaded = function() {
+            if (window.contentLoaded.socials && window.contentLoaded.projects && window.contentLoaded.timeline) {
+                const overlay = document.getElementById('loading-overlay');
+                if (overlay) {
+                    overlay.classList.add('hidden');
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                    }, 1500);
+                }
+            }
+        };
+    </script>
+    <script src="socials.js"></script>
+    <script src="projects.js"></script>
+    <script src="timeline.js"></script>
+    <script>
+        // Get theme from localStorage or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        
+        const themeToggle = document.getElementById('themeToggle');
+        // Set initial checkbox state based on theme
+        themeToggle.checked = currentTheme === 'dark';
+        
+        themeToggle.addEventListener('change', () => {
+            const newTheme = themeToggle.checked ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
 </body>
 </html>

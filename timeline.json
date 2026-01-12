@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "title": "James Madison High School",
+      "description": "",
+      "side": "R",
+      "startMonth": 8,
+      "startYear": 2019,
+      "endMonth": 5,
+      "endYear": 2023
+    },
+    {
+      "title": "GMU ASSIP Internship",
+      "description": "",
+      "side": "L",
+      "startMonth": 6,
+      "startYear": 2022,
+      "endMonth": 8,
+      "endYear": 2022
+    },
+    {
+      "title": "GMU ASSIP Internship",
+      "description": "",
+      "side": "L",
+      "startMonth": 6,
+      "startYear": 2023,
+      "endMonth": 8,
+      "endYear": 2023
+    },
+    {
+      "title": "ExaFlow Research Assistant",
+      "description": "",
+      "side": "L",
+      "startMonth": 8,
+      "startYear": 2024,
+      "endMonth": 5,
+      "endYear": 2025
+    },
+    {
+      "title": "ExaFlow Research Assistant",
+      "description": "",
+      "side": "L",
+      "startMonth": 8,
+      "startYear": 2025,
+      "endMonth": 5,
+      "endYear": 2026
+    },
+    {
+      "title": "Fall 2023",
+      "description": "",
+      "side": "R",
+      "startMonth": 8,
+      "startYear": 2023,
+      "endMonth": 12,
+      "endYear": 2023
+    },
+    {
+      "title": "Spring 2024",
+      "description": "",
+      "side": "R",
+      "startMonth": 1,
+      "startYear": 2024,
+      "endMonth": 5,
+      "endYear": 2024
+    },
+    {
+      "title": "Fall 2024",
+      "description": "",
+      "side": "R",
+      "startMonth": 8,
+      "startYear": 2024,
+      "endMonth": 12,
+      "endYear": 2024
+    },
+    {
+      "title": "Spring 2025",
+      "description": "",
+      "side": "R",
+      "startMonth": 1,
+      "startYear": 2025,
+      "endMonth": 5,
+      "endYear": 2025
+    },
+    {
+      "title": "Fall 2025",
+      "description": "",
+      "side": "R",
+      "startMonth": 8,
+      "startYear": 2025,
+      "endMonth": 12,
+      "endYear": 2025
+    },
+    {
+      "title": "Spring 2026",
+      "description": "",
+      "side": "R",
+      "startMonth": 1,
+      "startYear": 2026,
+      "endMonth": 5,
+      "endYear": 2026
+    },
+    {
+      "title": "Oxford/Spain Study Abroad",
+      "description": "",
+      "side": "L",
+      "startMonth": 6,
+      "startYear": 2024,
+      "endMonth": 8,
+      "endYear": 2024
+    },
+    {
+      "title": "Amentum Internship",
+      "description": "",
+      "side": "L",
+      "startMonth": 6,
+      "startYear": 2025,
+      "endMonth": 8,
+      "endYear": 2025
+    }
+  ]
+}

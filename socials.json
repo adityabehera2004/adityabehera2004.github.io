@@ -1,0 +1,32 @@
+{
+  "socials": [
+    {
+      "iconUrl": "https://cdn.simpleicons.org/github/000000",
+      "iconLocal": "social-icons/github-icon.svg",
+      "socialName": "GitHub",
+      "accountName": "adityabehera2004",
+      "link": "https://github.com/adityabehera2004"
+    },
+    {
+      "iconUrl": "",
+      "iconLocal": "social-icons/linkedin-icon.svg",
+      "socialName": "LinkedIn",
+      "accountName": "Aditya Behera",
+      "link": "https://www.linkedin.com/in/aditya-behera2004/"
+    },
+    {
+      "iconUrl": "https://cdn.simpleicons.org/x/000000",
+      "iconLocal": "social-icons/x-icon.svg",
+      "socialName": "X",
+      "accountName": "AdityaBehera04",
+      "link": "https://x.com/AdityaBehera04"
+    },
+    {
+      "iconUrl": "https://cdn.simpleicons.org/instagram/000000",
+      "iconLocal": "social-icons/instagram-icon.svg",
+      "socialName": "Instagram",
+      "accountName": "aditya_behera2004",
+      "link": "http://instagram.com/aditya_behera2004/"
+    }
+  ]
+}
