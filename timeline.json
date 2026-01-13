@@ -29,7 +29,7 @@
     },
     {
       "title": "Fall 2023",
-      "description": "APPH 1040 Sci Foundation of Health\nCS 1100 Freshman Leap Seminar\nCS 1331 Intro-Object Orient Prog\nGT 1000 GT Freshman Seminar\nMATH 1564 LinAlg w Abstract Vec Sp\nPHYS 2211 Intro Physics I\nPUBP 1142 Teams and Collaboration",
+      "description": "CS 1331 Intro to Object-Oriented Programming\nMATH 1564 Linear Algebra with Abstract Vector Spaces\nPHYS 2211 Intro Physics I\nAPPH 1040 Physical Health\nCS 1100 Freshman Seminar\nGT 1000 GT Freshman Seminar\nPUBP 1142 Teams and Collaboration",
       "side": "R",
       "startMonth": 8,
       "startYear": 2023,
@@ -38,7 +38,7 @@
     },
     {
       "title": "Spring 2024",
-      "description": "CS 1332 Data Struct & Algorithms\nCS 2110 Computer Organiz&Program\nENGL 1102 English Composition II\nGT 1201 Explr Grand Challenges\nPSYC 1101 General Psychology",
+      "description": "CS 1332 Data Structures & Algorithms\nCS 2110 Computer Organization & Programming\nENGL 1102 English Composition II\nPSYC 1101 General Psychology\nGT 1201 Grand Challenges",
       "side": "R",
       "startMonth": 1,
       "startYear": 2024,
@@ -47,7 +47,7 @@
     },
     {
       "title": "Fall 2024",
-      "description": "CS 2050 Intro Discrete Math\nCS 2200 Systems and Networks\nCS 2340 Objects and Design\nISYE 3770 Statistics & Applications\nMATH 2550 Intro Multivariable Calc\nVIP 3602 VIP Proj Team: JR II",
+      "description": "CS 2340 Objects and Design\nCS 2200 Systems and Networks\nMATH 2550 Intro Multivariable Calculus\nCS 2050 Intro Discrete Math\nISYE 3770 Statistics & Applications",
       "side": "R",
       "startMonth": 8,
       "startYear": 2024,
@@ -56,7 +56,7 @@
     },
     {
       "title": "Spring 2025",
-      "description": "CS 3001 Computing & Society\nCS 3511 Algorithms Honors\nCS 3600 Intro-Artificial Intell\nCS 3630 Intro-Perception & Robotic\nVIP 3602 VIP Proj Team: JR II",
+      "description": "CS 3511 Algorithms Honors\nCS 3600 Intro Artificial Intelligence\nCS 3630 Intro Perception & Robotics\nCS 3001 Computing Ethics & Society",
       "side": "R",
       "startMonth": 1,
       "startYear": 2025,
@@ -65,7 +65,7 @@
     },
     {
       "title": "Fall 2025",
-      "description": "CS 3210 Design-Operating Systems\nCS 3251 Computer Networking I\nCS 4240 Compilers & Interpreters\nCS 4641 Machine Learning\nECE 2031 Digital Design Lab\nVIP 4603 VIP Project Team: SR III",
+      "description": "CS 4641 Machine Learning\nCS 3210 Design of Operating Systems\nCS 4240 Compilers & Interpreters\nCS 3251 Computer Networking I\nECE 2031 Digital Design of Circuits",
       "side": "R",
       "startMonth": 8,
       "startYear": 2025,
