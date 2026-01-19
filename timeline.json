@@ -20,12 +20,22 @@
     },
     {
       "title": "GMU ASSIP Internship",
-      "description": "Integrated NASA’s ROCKE-3D climate model into GMU’s HOPPER supercomputer using FORTRAN. Modified climate simulations’ initial conditions with Geographic Information System (GIS) software. Deployed and analyzed simulation results on HOPPER and with Matplotlib.",
+      "description": "Integrated NASA's ROCKE-3D climate model into GMU's HOPPER supercomputer using FORTRAN. Modified climate simulations' initial conditions with Geographic Information System (GIS) software. Deployed and analyzed simulation results on HOPPER and with Matplotlib.",
       "side": "L",
       "startMonth": 6,
       "startYear": 2023,
       "endMonth": 8,
-      "endYear": 2023
+      "endYear": 2023,
+      "links": [
+        {
+          "displayName": "Poster",
+          "link": "https://drive.google.com/file/d/1MEBqZiroqX4i4FvqvikOIuFBtbgad9Bt/view"
+        },
+        {
+          "displayName": "GMU Blog",
+          "link": "https://science.gmu.edu/news/graduate-students-mentor-high-school-researchers-past-summer"
+        }
+      ]
     },
     {
       "title": "Fall 2023",
@@ -92,12 +102,18 @@
     },
     {
       "title": "ExaFlow Research Assistant",
-      "description": "Presented findings on GPU parallelization and HPC techniques at the APS Global Physics Summit. Developing a physics-informed neural network (PINN) optimized for fluid dynamics simulations on HPC systems. Optimizing memory access patterns and GPU kernel executions with CUDA for 150% improved throughput on multi-node GPU clusters to improve performance of C++ computational fluid dynamics solver ExaFlow3D. Benchmarking GPU parallelization frameworks (OpenMP, OpenACC, Kokkos, SYCL) on Georgia Tech’s PACE ICE cluster to evaluate scalability, memory bandwidth, and computational efficiency. Collaborating with a team of 12 graduate and undergraduate students to scale ExaFlow3D.",
+      "description": "Presented findings on GPU parallelization and HPC techniques at the APS Global Physics Summit. Developing a physics-informed neural network (PINN) optimized for fluid dynamics simulations on HPC systems. Optimizing memory access patterns and GPU kernel executions with CUDA for 150% improved throughput on multi-node GPU clusters to improve performance of C++ computational fluid dynamics solver ExaFlow3D. Benchmarking GPU parallelization frameworks (OpenMP, OpenACC, Kokkos, SYCL) on Georgia Tech's PACE ICE cluster to evaluate scalability, memory bandwidth, and computational efficiency. Collaborating with a team of 12 graduate and undergraduate students to scale ExaFlow3D.",
       "side": "L",
       "startMonth": 8,
       "startYear": 2024,
       "endMonth": 5,
-      "endYear": 2025
+      "endYear": 2025,
+      "links": [
+        {
+          "displayName": "Poster",
+          "link": "https://drive.google.com/file/d/1GR79zQCAk7_Hky9Wolk4HeCouqQVwlzS/view"
+        }
+      ]
     },
     {
       "title": "ExaFlow Research Assistant",

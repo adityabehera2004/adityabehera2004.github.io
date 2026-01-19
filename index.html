@@ -355,7 +355,7 @@
             color: var(--text-color);
             opacity: 0.9;
             line-height: 1.6;
-            margin: 0;
+            margin: 0 0 20px 0;
             overflow-y: auto;
             flex: 1;
             min-height: 0;
@@ -378,6 +378,32 @@
         .timeline-modal-description::-webkit-scrollbar-thumb:hover {
             background-color: var(--text-color);
             opacity: 0.5;
+        }
+
+        .timeline-modal-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 5px;
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+
+        .timeline-modal-link {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: text-decoration 0.2s ease;
+        }
+
+        .timeline-modal-link:hover {
+            text-decoration: underline;
+        }
+
+        .timeline-modal-link-separator {
+            color: var(--text-color);
+            opacity: 0.5;
+            margin: 0 12px;
         }
 
         .timeline-item-left .timeline-item-content {
@@ -425,6 +451,31 @@
             background: linear-gradient(to right, transparent, var(--header-bg) 15%, var(--header-bg));
             padding-left: 30px;
             font-weight: 500;
+        }
+
+        .timeline-item-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+
+        .timeline-item-link {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+
+        .timeline-item-link:hover {
+            text-decoration: underline;
+        }
+
+        .timeline-item-link-separator {
+            color: var(--text-color);
+            opacity: 0.5;
+            margin: 0 4px;
         }
 
         .timeline-item-dot {
@@ -968,6 +1019,14 @@
 
             .timeline-modal-description {
                 font-size: 14px;
+            }
+
+            .timeline-modal-links {
+                gap: 15px;
+            }
+
+            .timeline-modal-link {
+                font-size: 16px;
             }
 
             .theme-toggle-label {

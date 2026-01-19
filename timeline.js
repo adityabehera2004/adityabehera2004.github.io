@@ -323,6 +323,41 @@ async function loadTimeline() {
                 });
             }
 
+            // Add links to card if they exist
+            if (item.links && item.links.length > 0) {
+                const cardLinks = document.createElement('div');
+                cardLinks.className = 'timeline-item-links';
+                
+                // Show only first 2 links to keep cards compact
+                const linksToShow = item.links.slice(0, 2);
+                
+                linksToShow.forEach((linkItem, linkIndex) => {
+                    const link = document.createElement('a');
+                    link.href = linkItem.link;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.className = 'timeline-item-link';
+                    link.textContent = linkItem.displayName;
+                    
+                    // Prevent modal from opening when clicking on link
+                    link.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+
+                    cardLinks.appendChild(link);
+
+                    // Add separator (│) between links
+                    if (linkIndex < linksToShow.length - 1) {
+                        const separator = document.createElement('span');
+                        separator.className = 'timeline-item-link-separator';
+                        separator.textContent = ' │ ';
+                        cardLinks.appendChild(separator);
+                    }
+                });
+
+                itemContent.appendChild(cardLinks);
+            }
+
             itemElement.appendChild(itemContent);
 
             // Create highlight line segment for hover effect
@@ -431,10 +466,37 @@ function openTimelineModal(item) {
     description.className = 'timeline-modal-description';
     description.textContent = item.description || '';
     
+    // Create links container (if links exist)
+    const modalLinks = document.createElement('div');
+    modalLinks.className = 'timeline-modal-links';
+
+    if (item.links && item.links.length > 0) {
+        item.links.forEach((linkItem, linkIndex) => {
+            const link = document.createElement('a');
+            link.href = linkItem.link;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.className = 'timeline-modal-link';
+            link.textContent = linkItem.displayName;
+            modalLinks.appendChild(link);
+
+            // Add separator (│) between links, but not after the last one
+            if (linkIndex < item.links.length - 1) {
+                const separator = document.createElement('span');
+                separator.className = 'timeline-modal-link-separator';
+                separator.textContent = ' │ ';
+                modalLinks.appendChild(separator);
+            }
+        });
+    }
+    
     // Assemble modal
     content.appendChild(title);
     content.appendChild(date);
     content.appendChild(description);
+    if (item.links && item.links.length > 0) {
+        content.appendChild(modalLinks);
+    }
     modal.appendChild(closeButton);
     modal.appendChild(content);
     backdrop.appendChild(modal);
