@@ -16,6 +16,17 @@
       ]
     },
     {
+      "title": "NxN Systolic Array",
+      "description": "NxN systolic array accelerator for chained matrix-matrix multiplication in Verilog",
+      "link": "https://github.com/adityabehera2004/nxn-systolic-array",
+      "links": [
+        {
+          "displayName": "GitHub",
+          "link": "https://github.com/adityabehera2004/nxn-systolic-array"
+        }
+      ]
+    },
+    {
       "title": "RepoRuler",
       "description": "Chrome extension that displays GitHub repository size in the About section next to forks and stars. I created this because one time I accidentally cloned a repo that was 40GB. The extension works for public repos automatically, and private repos can use a Personal Access Token (PAT) for authentication. It helps developers quickly see repository sizes before cloning.",
       "link": "https://chromewebstore.google.com/detail/reporuler/pbffgdgaelgacobpfgidjkpeoaljgpij",
